@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>domehouse</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            background-image: url(background.jpg);
+            background-size: cover;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            padding: 10px 30px;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.6);
+            border-bottom: 1px solid rgb(153, 140, 140);
+
+        }
+
+        .logo {
+            padding: 13px 10px;
+            height: 70px;
+            float: left;
+            font: italic 23px Snap ITC;
+            color: rgb(228, 174, 123);
+            text-shadow: 2px 4px 6px black;
+
+        }
+
+        nav ul {
+            list-style: none;
+            float: right;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            line-height: 50px;
+            color: #fff;
+            padding: 5px 20px;
+            font-size: 15px;
+            text-decoration: none;
+            font-family: "Lucida Calligraphy";
+
+        }
+
+        nav ul li a:hover {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 9px;
+            font-size: 17px;
+            font-family: "Lucida Calligraphy";
+        }
+
+        .title {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+
+        .slider {
+            width: 500px;
+            height: 375px;
+            margin: 0 auto;
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+            float: left;
+        }
+
+        .container {
+            width: 1200;
+            height: 380px;
+            margin-left: 80px;
+            padding-left: 10px;
+
+        }
+
+        .box2 {
+            margin-left: 20px;
+            float: left;
+        }
+
+        .box3 {
+            float: right;
+            margin-right: 73px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .content {
+            width: 65%;
+            height: 970px;
+            margin-top: 20px;
+            margin-left: 90px;
+            border: none;
+            background-image: url(istock3.jpg);
+            border-radius: 10px;
+        }
+
+        .about {
+            font-family: Courier New;
+            text-shadow: 2px 4px 6px gray;
+            text-indent: 1.5rem;
+        }
+
+        hr {
+            color: lightsteelblue;
+
+        }
+
+        .words {
+            line-height: 22px;
+            word-spacing: 3px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+
+        #listbox1 {
+            float: left;
+            margin-left: 30px;
+
+        }
+
+        #listbox2 {
+            float: right;
+            margin-right: 100px;
+        }
+
+        ul {
+            list-style-type: square;
+            size: 15px;
+        }
+
+        #list li {
+            font-family: Helvetica;
+        }
+
+        .follow {
+            text-align: center;
+            font-family: Harrington;
+            font-size: 19px;
+            margin-top: 4px;
+        }
+
+        .footer {
+            padding: 3px 0;
+            background-color: gray;
+            opacity: 85%;
+        }
+
+        .social {
+            text-align: center;
+            list-style: none;
+            padding-bottom: 3px;
+        }
+
+        footer div a {
+            font-size: 24px;
+            color: inherit;
+            border: none;
+            width: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            opacity: 0.75;
+            margin: 5px;
+        }
+
+        footer div a:hover {
+            opacity: 0.9;
+            background-color: lightblue;
+        }
+
+        .copyright {
+            margin-bottom: 3px;
+            font-size: 13px;
+        }
+    </style>
+
+</head>
+
+<body onload="changeImg()">
+    <nav>
+        <div class="logo">SANDS LODGE</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="domehouse.html">Dome House</a></li>
+            <li><a href="motorhome.html">Motorhome</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booknow.html">Book Now</a></li>
+        </ul>
+    </nav>
+    <h2 class="title">The Domes at Canyonlands</h2>
+    <h4 style="text-align: center;">Dome House Hosted By Adam & Hailey . Monticello, Utah, United States</h4>
+
+    <div class="container">
+
+        <img class="slider" name="slide">
+        <script>
+            var i = 0;
+            var image = [];
+            image[0] = "17.jpg"
+            image[1] = "9.jpeg"
+            image[2] = "8.jpeg"
+            image[3] = "21.jpeg"
+            image[4] = "20.jpeg"
+            image[5] = "7.jpeg"
+
+            function changeImg() {
+                document.slide.src = image[i];
+                if (i < image.length - 1) {
+                    i++;
+                }
+                else {
+                    i = 0;
+                }
+                setTimeout("changeImg()", 2000);
+            }
+
+        </script>
+
+        <div>
+            <img class="box2" src="16.jpg">
+        </div>
+
+        <div>
+            <img class="box3" src="18.jpg">
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+        <h3 class="about">About the dome house</h3>
+        <p class="words">
+            Do you want to escape from hustle and bustle of the city? Come to our dome house
+            to enjoy the cozy and quiet staycation. Enjoy the ourdoors without sacrificing the
+            comfort of a king size bed, private bathroom , free WIFI and Barbecue utensils while staying
+            in our cosy dome house.All the bathroom essentials will be provided during your staycation.
+            What's more,pets are allowed in our domes as well. There is a Barbecue pit just right outside of the dome
+            house.
+            You will be able to park in the parking lot near the dome house, and walk in to your path.
+            You will have digital key code to access to your dome when you arrive.
+            Feel free to explore the property with its stunning mountain peaks.You may even spot white dogs and some
+            cute goats.
+        </p>
+        <br>
+
+        <h3 class="about">Things To Take Note</h3>
+
+        <ul>
+            <li>No smoking</li>
+            <br>
+            <li>No littering around</li>
+            <br>
+            <li>No events or parties</li>
+            <br>
+            <li>Check-in:2:00pm-10:00pm</li>
+            <br>
+            <li>Check-out:11:00am</li>
+        </ul>
+
+        <p class="words">
+            Please note that smoking is not allowed inside the domehouse. Smoking is permitted outside only.
+            Be sure to check the digital guest book or physical copy in the dome for instructions on how to operate the
+            heater and AC if you are having difficulty.
+            Due to COVID-19 pandemic , we are not allowed to gather in more than 5 people group.We are taking extra
+            efforts to ensure proper hygiene and cleanliness of the dome house. Our goal is to make your stay safe as
+            possible.
+            However, if you do not feel well or have been exposed to COVID-19, please stay home.
+            Cancellation fee of 20% rental charge will be applied if you cancel the booking less than 12 hours.
+        </p>
+        <br>
+
+        <h3 class="about">What This Place Offers</h3>
+
+        <div id="list">
+            <div id="listbox1">
+                <ul>
+                    <li>Freezer</li>
+                    <br>
+                    <li>Free Wifi</li>
+                    <br>
+                    <li>Air Conditioner</li>
+                    <br>
+                    <li>Mountain view</li>
+                    <br>
+                    <li>Dishes and silverware</li>
+                </ul>
+            </div>
+
+            <div id="listbox2">
+                <ul>
+                    <li>Pets allowed</li>
+                    <br>
+                    <li>Barbecue utensils</li>
+                    <br>
+                    <li>Public or shared beach access</li>
+                    <br>
+                    <li>Outdoor dining area</li>
+                    <br>
+                    <li>Free parking on premises</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <footer class="footer">
+        <div class="social">
+            <p class="follow">Follow Us On</p>
+
+            <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+            <p class="copyright">copyright@2021,designed by Sands Lodge</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

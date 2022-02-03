@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script>
+        alert("welcome to our sands lodge");
+        alert("Have a nice day");
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><!--for social media icons only-->
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    padding:10px 30px;
+    box-sizing: border-box;
+    background:rgba(0,0,0,0.6);
+    border-bottom: 1px solid rgb(153, 140, 140);
+    
+}
+
+.logo{
+    padding:13px 10px;
+    height:70px;
+    float: left;
+    font:italic 23px Snap ITC;
+    color:rgb(228, 174, 123);
+    text-shadow: 2px 4px 6px black;
+    
+}
+
+nav ul{
+    list-style: none;
+    float:right;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+
+nav ul li a{
+    line-height: 50px;
+    color:#fff;
+    padding:5px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    font-family:"Lucida Calligraphy";
+    
+}
+
+nav ul li a:hover{
+    background:rgba(0,0,0,0.7);
+    border-radius: 9px;
+    font-size: 17px;
+    font-family: "Lucida Calligraphy";
+}
+
+h2{
+    text-align: center;
+    font-family:Courier New;
+    text-shadow: 2px 4px 6px gray;
+}
+
+#box{
+    /* margin: 0px; */
+    width:100%;
+    height:300px;
+    border:1px solid rgb(252, 248, 240);
+    border-radius: 15px;
+    background-color: rgb(245, 244, 244);
+    position:static;
+}
+
+#concept{
+    width: 600px;
+    height: 200px;
+    border:none;
+    padding: 5px 5px;
+    margin-left: 110px;
+    margin-top: -20px;
+    line-height: 35px;
+    font-size: 20px;
+    word-spacing: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.container{
+    width: 870px;
+    height: 300px;
+    border:none;
+    margin-left: 210px;
+}
+
+.follow{
+    text-align: center;
+    font-family: Harrington;
+    font-size: 19px;
+    margin-top: 4px;
+}
+.footer{
+    padding:3px 0;
+    background-color: gray;
+}
+.social{
+    text-align: center;
+    list-style: none;
+    padding-bottom: 3px;
+}
+footer div a{
+    font-size: 24px;
+    color:inherit;
+    border:1px solid #ccc;
+    width:40px;
+    line-height: 38px;
+    display:inline-block;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0.75;
+    margin:5px;
+}
+footer div a:hover{
+    opacity: 0.9;
+    background-color: lightblue;
+}
+.copyright{
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+audio{
+    margin-left: 5px;
+    width: 200px;
+    height:40px;
+
+}
+
+</style>
+
+<script>
+    
+    function move1()
+    {
+        document.bgColor = "lightyellow";
+    }
+
+    function move2()
+    {
+        document.bgColor = "lightgray";
+    }
+
+    function move3(item, clr)
+    {
+        item.style.color = clr;
+    }
+   
+</script>
+
+</head>
+<body onload="changeImg()">
+    
+    <img name="slide" width =1280  height=336>
+
+    <script>
+        var i = 0;
+        var image = [];
+        image[0] = "5.jpg"
+        image[1] = "4.jpg"
+        image[2] = "1.jpg"
+        image[3] = "6.jpg"
+
+        function changeImg()
+        {
+            document.slide.src = image[i];
+            if (i < image.length-1){
+                i++;
+            }
+            else{
+                i = 0;
+            }
+            setTimeout("changeImg()",2000);
+        }
+
+    </script>
+    
+ <nav>
+     <div class="logo">SANDS LODGE</div>
+     <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="domehouse.html">Dome House</a></li>
+        <li><a href="motorhome.html">Motorhome</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booknow.html">Book Now</a></li>
+     </ul>
+ </nav>
+ 
+<div class="slider"></div>
+ <div id="box">
+
+    <iframe width="420" height="285" src="https://www.youtube.com/embed/YnzULdZ9e00" title="Domes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="float: right;margin:6px 3px;border-radius: 15px;"></iframe>
+    <h2 onmouseover="move1()" onmouseout="move2()">Our Conception</h2>
+
+
+    <div id="concept">
+        <p onmousedown=" move3(this, 'orange')">The Concept of Sands Lodge is inspired by natural wonderland 
+           in Canyonlands National Park. We provide unique holiday staycation for people who would like to embrace natural moutains.
+            We're inviting you to enjoy the desert views with stunning sunrise and sunset.
+             Discover your perfect vacation staycation with us and bring back unforgettable memories.
+        </p>
+    </div> 
+       
+</div>
+
+ <h2>Our Accommodation</h2>
+ <br>
+ <div class="container">
+
+ <div style="float: left;">
+ <img src="3.jpeg" style="border-radius: 15px;">
+ <p style="font-size: 18px;text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The Dome House at Canyonlands National Park</p>
+ </div>
+
+<div style="float:right">
+ <img src="bus21.jfif" style="border-radius: 15px;">
+ <p style="font-size: 18px; text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The Motorhome at Canyonlands National Park</p>
+</div>
+
+</div>
+</body>
+
+<audio controls >
+    <source src="music.mp3">
+</audio>
+
+ <footer class="footer">
+     <div class="social">
+         <p class="follow">Follow Us On</p>
+
+             <a href="http://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+             <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+             <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+             <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+             <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+       
+         <p class="copyright">copyright@2021,designed by Sands Lodge</p>
+        
+     </div> 
+    
+</footer>
+
+</body>
+</html>
